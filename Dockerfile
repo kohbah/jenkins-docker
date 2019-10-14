@@ -9,19 +9,7 @@ RUN mkdir -p /tmp/download && \
  groupadd -g 999 docker && \
  usermod -aG staff,docker jenkins
 
-RUN apt-get update && apt-get install -y \
-    software-properties-common
-RUN add-apt-repository universe
-RUN apt-get update && apt-get install -y \
-    apache2 \
-    curl \
-    git \
-    libapache2-mod-php5 \
-    php5 \
-    php5-mcrypt \
-    php5-mysql \
-    python3.4 \
-    python3-pip
-RUN pip install docker-compose
+RUN apk add --no-cache py-pip python-dev libffi-dev openssl-dev gcc libc-dev make && \
+    pip install docker-compose
 
 user jenkins
