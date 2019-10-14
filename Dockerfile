@@ -22,5 +22,6 @@ RUN apt-get update && apt-get install -y \
     php5-mysql \
     python3.4 \
     python3-pip
+    -H pip install docker-compose
 
 user jenkins
