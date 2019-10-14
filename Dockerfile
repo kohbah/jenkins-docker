@@ -7,7 +7,7 @@ RUN mkdir -p /tmp/download && \
  mv /tmp/download/docker/docker* /usr/local/bin/ && \
  rm -rf /tmp/download && \
  groupadd -g 999 docker && \
+ apt install docker-compose \
  usermod -aG staff,docker jenkins
- apt install docker-compose
-
+ 
 user jenkins
