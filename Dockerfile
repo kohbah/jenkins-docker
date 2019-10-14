@@ -8,6 +8,6 @@ RUN mkdir -p /tmp/download && \
  rm -rf /tmp/download && \
  groupadd -g 999 docker && \
  apt install docker-compose \
- usermod -aG staff,docker jenkins
- 
+ usermod -aG staff,docker jenkins \
+ \
 user jenkins
