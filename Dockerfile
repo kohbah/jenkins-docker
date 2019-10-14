@@ -8,6 +8,9 @@ RUN mkdir -p /tmp/download && \
  rm -rf /tmp/download && \
  groupadd -g 999 docker && \
  usermod -aG staff,docker jenkins
- -H pip install docker-compose
+
+RUN apt-get update && apt-get install -y \
+    php5-mcrypt \
+    python-pip
 
 user jenkins
